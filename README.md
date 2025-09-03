@@ -57,6 +57,22 @@ A modern, customizable portfolio template built with **Vite**, **React**, **Type
 
    Visit http://localhost:5173 to view the app.
 
+### Code Quality and Formatting
+
+This project uses [ESLint](https://eslint.org/) for code linting and [Prettier](https://prettier.io/) for code formatting.  
+It's recommended to install the relevant extensions in your code editor for the best development experience:
+
+- **VS Code Extensions:**
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+You can run linting and formatting from the command line:
+
+```sh
+npm run lint
+npm run format
+```
+
 ### Customization
 
 - Edit components in the src/ directory to personalize your portfolio.
