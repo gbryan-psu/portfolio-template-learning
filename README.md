@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# Portfolio Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, customizable portfolio template built with **Vite**, **React**, **TypeScript**, and **TailwindCSS**.
 
-Currently, two official plugins are available:
+> Based on a guide by PedroTech – [YouTube Video](https://www.youtube.com/watch?v=ifOJ0R5UQOc).  
+> The original tutorial uses JavaScript. This project is implemented in TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Vite** for fast development and build
+- **React** for component-based UI
+- **TypeScript** for type safety
+- **TailwindCSS** for utility-first styling
+- Responsive design
+- Easy to customize and extend
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/gbryan-psu/portfolio-template-learning
+   cd gabefolio
+
+   ```
+
+2. **Install Dependencies:**
+
+   ```sh
+   npm install
+   # or
+   yarn install
+
+   ```
+
+3. **Start the development server:**
+
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+
+   ```
+
+4. **Open in Browser:**
+
+   Visit http://localhost:5173 to view the app.
+
+### Customization
+
+- Edit components in the src/ directory to personalize your portfolio.
+- Update tailwind.config.js to adjust TailwindCSS settings.
+- Modify vite.config.ts for build or plugin changes.
+
+### Credits
+
+- [PedroTech](https://www.youtube.com/@PedroTechnologies) for the original tutorial.
