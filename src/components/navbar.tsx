@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useEffect, useState } from 'react';
+import { ThemeToggle } from './themeToggle';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -16,7 +17,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -27,7 +28,7 @@ export const Navbar = () => {
     <nav
       className={cn(
         'fixed w-full z-40 transition-all duration-300',
-        isScrolled ? 'py-3 bg-background/80 backdrop-blur-md shadow-xs' : 'py-5'
+        isScrolled ? 'py-3 bg-background backdrop-blur-md shadow-xs' : 'py-5'
       )}
     >
       <div className="container flex items-center justify-between">
@@ -38,16 +39,21 @@ export const Navbar = () => {
         </a>
 
         {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
-            <a
-              key={key}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
+        <div className="hidden md:flex items-center ml-auto">
+          <div className="flex space-x-8">
+            {navItems.map((item, key) => (
+              <a
+                key={key}
+                href={item.href}
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className="ml-6">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* mobile nav */}
