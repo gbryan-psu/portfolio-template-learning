@@ -1,4 +1,5 @@
 import { Briefcase, Code, User } from 'lucide-react';
+import { DownloadIcon } from 'lucide-react';
 
 export const AboutSection = () => {
   return (
@@ -34,9 +35,11 @@ export const AboutSection = () => {
                 Contact Me
               </a>
               <a
-                href=""
+                href="docs/GDB-Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                download
               >
+                <DownloadIcon className="inline-block mr-1" />
                 Download Resumé
               </a>
             </div>
